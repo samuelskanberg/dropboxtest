@@ -12,5 +12,6 @@ specified in the Dropbox app.
 
 ## Configure
 
-1. Create an app key for dropbox 2. Enter that key in app.js when calling new
+1. Create an app key for dropbox
+2. Enter that key in app.js when calling new
 `Dropbox.Client({ key: "xatg1pwrwutb0xc" })`
