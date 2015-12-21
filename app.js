@@ -1,6 +1,13 @@
 $(document).ready(function(){
   console.log("Fooosa");
 
+  // Very quick and dirty fix to redirect to https when not on localhost
+  if (window.location.protocol == "http:" &&
+    !(/localhost/.test(window.location.href))) {
+      var restOfUrl = window.location.href.substr(5);
+      window.location = "https:" + restOfUrl;
+  }
+
   var client = new Dropbox.Client({ key: "xatg1pwrwutb0xc" });
 
   client.authenticate({interactive: false}, function(error, client) {
